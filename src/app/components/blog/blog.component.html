@@ -1,0 +1,27 @@
+<section>
+    <div class="formContainer">
+            <div class="mb-3">
+              <label for="titulo" class="form-label">Título</label>
+              <input type="text" class="form-control" id="titulo" required
+              [(ngModel)]="newPublicacion.titulo">
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">URL de la imagen</label>
+                <input type="text" class="form-control" id="imagen" required
+                [(ngModel)]="newPublicacion.urlImagen">
+            </div>
+            <div class="mb-3">
+                <label for="texto" class="form-label">Texto</label>
+                <input type="text" class="form-control" id="texto" required
+                [(ngModel)]="newPublicacion.texto">
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" required
+                [(ngModel)]="newPublicacion.fecha">
+            </div>
+           <button (click)="guardarPublicacion()">Enviar</button>
+          <div id="listadoContainer" [innerHTML]="cargarPublicacion()">
+          </div>
+    </div>
+</section>
